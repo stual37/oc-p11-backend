@@ -2,7 +2,7 @@
 
 ## récupértion du projet
 Pour récupérer le projet : 
-	- Ouvrez un terminal, 
+- Ouvrez un terminal, 
 	- Placez vous dans le répertoire désiré puis lancez la ligne de commande suivante : 
  
 		git clone https://github.com/stual37/oc-p11-backend.git
