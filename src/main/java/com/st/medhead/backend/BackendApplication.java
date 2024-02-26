@@ -94,7 +94,7 @@ public class BackendApplication {
 			public void addCorsMappings(@SuppressWarnings("null") CorsRegistry registry) {
 				registry.addMapping("/**")
 				.allowCredentials(true)
-				.allowedOrigins("http://localhost:3000")
+				.allowedOriginPatterns("http://*", "localhost", "127.0.0.1", "192.*")
 				.allowedMethods("GET", "POST")
 				.allowedHeaders("*")
 				.exposedHeaders("*")
