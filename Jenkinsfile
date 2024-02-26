@@ -3,16 +3,10 @@ pipeline {
     agent any
 
     stages {
-    	stage('Install') {
-    		steps {
-    			// Get some code from a GitHub repository
-                git 'https://github.com/stual37/oc-p11-backend.git'
-
-    		}
-    	} 
-    	
     	stage('Build') {
             steps {
+            	// Get some code from a GitHub repository
+                git 'https://github.com/stual37/oc-p11-backend.git'
                 // Run Maven on a Unix agent.
                 sh "./mvnw package"
 
@@ -32,7 +26,9 @@ pipeline {
     	
     	stage('Tests') {
             steps {
-                                // Run Maven on a Unix agent.
+                // Get some code from a GitHub repository
+                git 'https://github.com/stual37/oc-p11-backend.git'
+                // Run Maven on a Unix agent.
                 sh "./mvnw test"
             }
 
