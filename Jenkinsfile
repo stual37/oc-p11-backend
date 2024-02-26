@@ -11,22 +11,7 @@ pipeline {
     		}
     	} 
     	
-    	stage('Tests') {
-            steps {
-                                // Run Maven on a Unix agent.
-                sh "./mvnw test"
-            }
-
-            post {
-                // If Maven was able to run the tests, even if some of the test
-                
-                success {
-                    junit allowEmptyResults: true, testResults:'**/target/surefire-reports/TEST-*.xml'
-                }
-            }
-        }
-    	
-        stage('Build') {
+    	stage('Build') {
             steps {
                 // Run Maven on a Unix agent.
                 sh "./mvnw package"
@@ -44,6 +29,23 @@ pipeline {
             	}
         	}
     	}
+    	
+    	stage('Tests') {
+            steps {
+                                // Run Maven on a Unix agent.
+                sh "./mvnw test"
+            }
+
+            post {
+                // If Maven was able to run the tests, even if some of the test
+                
+                success {
+                    junit allowEmptyResults: true, testResults:'**/target/surefire-reports/TEST-*.xml'
+                }
+            }
+        }
+    	
+        
         
     }
 }
