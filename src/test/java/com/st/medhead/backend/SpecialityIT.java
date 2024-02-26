@@ -35,8 +35,16 @@ public class SpecialityIT {
 	SpecialityController specialityController;
 	
 	@Test
+	public void givenASpecialities() throws Exception {
+				
+		mockMvc.perform(get("/specialities"))
+		.andExpect(status()
+		.is2xxSuccessful())
+		.equals(hospital);
+	}
+	
+	@Test
 	public void givenASpecialityAndACity_whenResquestIsGIveHospital_thenReserveBedIsPossible() throws Exception {
-		
 		
 		mockMvc.perform(get("/speciality?id=1&city=1"))
 		.andExpect(status()
