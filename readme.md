@@ -54,9 +54,10 @@ Le workflow comprend 5 branches :
 - Téléchargez  JMeter de puis le lien suivant : [https://jmeter.apache.org/download_jmeter.cgi](https://jmeter.apache.org/download_jmeter.cgi)
 - Depuis un terminal, lancez JMeter avec la ligne de commande suivante : 
 	
-	java -jar ApacheJMeter.jar
+		java -jar ApacheJMeter.jar
 
 - Dans la fenêtre qui s'ouvre cliquez sur "Ouvrir", puis sélectionnez le fichier "backend-tests-plan.jmx" fourni avec le projet.
+- Cliquer sur le bouton "Lancer".
  
  
 ## Intégration à la CI-CD
