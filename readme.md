@@ -33,8 +33,7 @@ Il est possible d'accéder à la base de données  avec :
 - mot de passe : sa
 
 ## Accès à l'interface de l'API
-Il est possible d'accéder à la documentation technique de l'API via : 
-		[http://127.0.0.1:9001/api.doc.html](http://127.0.0.1:9001/api/doc.html)
+Il est possible d'accéder à la documentation technique de l'API via : [http://127.0.0.1:9001/api.doc.html](http://127.0.0.1:9001/api/doc.html)
 
 Il est possible de tester son focntionnement soit par :
 - curl avec par exemple [http://127.0.0.1:9001/specialities](http://127.0.0.1:9001/specialities),
@@ -48,9 +47,19 @@ Le workflow comprend 5 branches :
 - develop : Branche principale servant pour le développement, il faut ensuite réaliser depuis cette branche une pull request vers la branche Master afin de faire les mises à jours des parties développés.
 - feature : Branche servant à développer des fonctionnalités supplémentaires, elle doit ensuite pusser vers la branche develop une fois validé
 - htofix : Branche servant à corriger des bugs,
-- release : Branche servant à réaliser les versions qui seront ensuites compilé pour la mise en production  
+- release : Branche servant à réaliser les versions qui seront ensuites compilé pour la mise en production.
  
-  ## Intégration à la CI-CD
+
+## Tests sous JMeter
+- Téléchargez  JMeter de puis le lien suivant : [https://jmeter.apache.org/download_jmeter.cgi](https://jmeter.apache.org/download_jmeter.cgi)
+- Depuis un terminal, lancez JMeter avec la ligne de commande suivante : 
+	
+	java -jar ApacheJMeter.jar
+
+- Dans la fenêtre qui s'ouvre cliquez sur "Ouvrir", puis sélectionnez le fichier "backend-tests-plan.jmx" fourni avec le projet.
+ 
+ 
+## Intégration à la CI-CD
 
  Un fichier Jenkinsfile est diponible.
  Il comprend la configuration qui devra être utilisé ppur la mise en place de la CI-CD dans Jenkins.
