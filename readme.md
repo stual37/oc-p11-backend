@@ -45,7 +45,7 @@ Il est possible de tester son focntionnement soit par :
 Le workflow comprend 5 branches :
 - Master : La branche principale, elle ne doit pas être modifié directement et doit rester 'saine'.
 - develop : Branche principale servant pour le développement, il faut ensuite réaliser depuis cette branche une pull request vers la branche Master afin de faire les mises à jours des parties développés.
-- feature : Branche servant à développer des fonctionnalités supplémentaires, elle doit ensuite pusser vers la branche develop une fois validé
+- feature : Branche servant à développer des fonctionnalités supplémentaires, elle doit ensuite pousser vers la branche develop une fois validé
 - htofix : Branche servant à corriger des bugs,
 - release : Branche servant à réaliser les versions qui seront ensuites compilé pour la mise en production.
  
